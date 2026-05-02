@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>301 Moved Permanently</title>
+  <script>
+(function() {
+    var lang = 'ru';
+    var target = new URL(window.location.href);
+    var prefix = '/' + lang;
+
+    target.protocol = 'https:';
+    target.hostname = 'bem.info';
+    target.port = '';
+
+    if (target.pathname === '/') {
+        target.pathname = prefix + '/';
+    } else if (target.pathname !== prefix && target.pathname.indexOf(prefix + '/') !== 0) {
+        target.pathname = prefix + target.pathname;
+    }
+
+    window.location.replace(target.toString());
+})();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://bem.info/ru/">
+  </noscript>
+  <link rel="canonical" href="https://bem.info/ru/">
+</head>
+<body>
+  <p>Moved permanently to <a href="https://bem.info/ru/" target="_blank" rel="noopener noreferrer">https://bem.info/ru/</a></p>
+</body>
+</html>
